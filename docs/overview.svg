@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="470" viewBox="0 0 1200 470" role="img" aria-labelledby="title desc">
+  <title id="title">EvidenceLoop: research you can inspect</title>
+  <desc id="desc">Parallel retrieval feeds a draft, citation validation, critique, bounded revision, and durable human review. Approved reports include an evidence ledger.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101c2b"/><stop offset="1" stop-color="#172f3a"/></linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#91b1bd" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1200" height="470" rx="20" fill="url(#bg)"/>
+  <g font-family="Segoe UI,Inter,Arial,sans-serif">
+    <text x="54" y="57" fill="#76e5c7" font-size="13" font-weight="700" letter-spacing="3">LANGGRAPH · AGENT ENGINEERING</text>
+    <text x="50" y="113" fill="#f0f6f8" font-size="46" font-weight="700">EvidenceLoop</text>
+    <text x="54" y="150" fill="#b7cbd5" font-size="20">Research you can inspect. Loops you can explain.</text>
+    <g fill="#1d3545" stroke="#405d6c">
+      <rect x="54" y="211" width="185" height="70" rx="12"/>
+      <rect x="280" y="211" width="160" height="70" rx="12"/>
+      <rect x="482" y="211" width="174" height="70" rx="12"/>
+      <rect x="698" y="211" width="158" height="70" rx="12"/>
+      <rect x="898" y="211" width="244" height="70" rx="12" stroke="#76e5c7"/>
+    </g>
+    <g stroke="#91b1bd" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M239 246H268"/><path d="M440 246H470"/><path d="M656 246H686"/><path d="M856 246H886"/>
+      <path d="M777 281V328H360V294"/>
+    </g>
+    <g fill="#f0f6f8" text-anchor="middle" font-size="19" font-weight="600">
+      <text x="146" y="241">Retrieve</text><text x="360" y="241">Draft</text><text x="569" y="241">Validate</text><text x="777" y="241">Critique</text><text x="1020" y="241">Human review</text>
+    </g>
+    <g fill="#b7cbd5" text-anchor="middle" font-size="12">
+      <text x="146" y="263">parallel branches + merge</text><text x="360" y="263">structured claims</text><text x="569" y="263">source IDs + exact quotes</text><text x="777" y="263">support + relevance</text><text x="1020" y="263">approve / revise / reject</text>
+      <text x="570" y="355" fill="#76e5c7" font-size="14">Revise within a shared draft budget</text>
+    </g>
+    <path d="M54 385H1144" stroke="#35505e"/>
+    <g fill="#afc6d1" font-size="14">
+      <text x="54" y="422">SQLite checkpoints</text><text x="318" y="422">Evidence ledger</text><text x="570" y="422">Offline evaluations</text><text x="856" y="422">Optional local LLM</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+{
+  "suite": "deterministic-control-flow-v1",
+  "scope": "Synthetic fixtures and offline extractive backend; no LLM quality measurement.",
+  "passed": 10,
+  "total": 10,
+  "cases": [
+    {
+      "name": "clean_draft_pauses_for_review",
+      "passed": true,
+      "status": "awaiting_review",
+      "draft_attempts": 1
+    },
+    {
+      "name": "missing_citation_repairs_on_second_draft",
+      "passed": true,
+      "status": "awaiting_review",
+      "draft_attempts": 2
+    },
+    {
+      "name": "repeated_critique_stops_at_budget",
+      "passed": true,
+      "status": "exhausted",
+      "draft_attempts": 3
+    },
+    {
+      "name": "no_evidence_abstains_without_drafting",
+      "passed": true,
+      "status": "insufficient_evidence",
+      "draft_attempts": 0
+    },
+    {
+      "name": "unknown_source_cannot_be_approved",
+      "passed": true,
+      "status": "exhausted",
+      "draft_attempts": 3
+    },
+    {
+      "name": "fabricated_quote_cannot_be_approved",
+      "passed": true,
+      "status": "exhausted",
+      "draft_attempts": 3
+    },
+    {
+      "name": "explicit_approval_finalizes",
+      "passed": true,
+      "status": "approved",
+      "draft_attempts": 1
+    },
+    {
+      "name": "human_rejection_stops",
+      "passed": true,
+      "status": "rejected",
+      "draft_attempts": 1
+    },
+    {
+      "name": "human_revision_consumes_same_budget",
+      "passed": true,
+      "status": "awaiting_review",
+      "draft_attempts": 2
+    },
+    {
+      "name": "sqlite_resume_with_rebuilt_graph",
+      "passed": true,
+      "status": "approved",
+      "evidence_snapshot_preserved": true
+    }
+  ]
+}

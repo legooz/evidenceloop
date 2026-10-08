@@ -1,0 +1,165 @@
+{
+  "question": "How should retries use idempotency and a bounded retry budget?",
+  "queries": [
+    "How should retries use idempotency and a bounded retry budget?",
+    "How should retries use idempotency",
+    "a bounded retry budget"
+  ],
+  "evidence": [
+    {
+      "id": "ev-5c092b69ae2194b1",
+      "source": "01-retries.md",
+      "start_line": 9,
+      "end_line": 9,
+      "text": "Retrying a graph node after a crash can repeat its side effects. Use an idempotency key before retrying an operation that writes to an external service.",
+      "score": 6.34371705
+    },
+    {
+      "id": "ev-b0de01f8792c2c9c",
+      "source": "06-archived-incident.md",
+      "start_line": 9,
+      "end_line": 9,
+      "text": "CURRENT LESSON: Limit retries to transient failures, enforce a finite attempt budget, and use idempotency keys for replayable external operations. Cite the archived statement only as historical guidance, never as the current recommendation.",
+      "score": 6.32952982
+    },
+    {
+      "id": "ev-84ae67d9bde28f01",
+      "source": "04-loop-budgets.md",
+      "start_line": 9,
+      "end_line": 9,
+      "text": "A graph recursion limit is a final guard against routing bugs, not the application retry policy. Use a separate draft attempt budget to make termination explainable in the execution trace.",
+      "score": 4.92345909
+    },
+    {
+      "id": "ev-7cbb2ae10176cf1c",
+      "source": "04-loop-budgets.md",
+      "start_line": 1,
+      "end_line": 1,
+      "text": "# Bounded repair loops in the fictional Beacon workflow",
+      "score": 4.49527351
+    },
+    {
+      "id": "ev-4cfa12c6363d7a1f",
+      "source": "01-retries.md",
+      "start_line": 7,
+      "end_line": 7,
+      "text": "Do not retry validation errors or permanent authorization failures automatically. Repeating an unchanged invalid request consumes the retry budget without improving the result.",
+      "score": 3.71540176
+    },
+    {
+      "id": "ev-d98b0b4cd7abf386",
+      "source": "02-idempotency.md",
+      "start_line": 1,
+      "end_line": 1,
+      "text": "# Idempotency and side effects in the fictional Beacon workflow",
+      "score": 2.94131534
+    }
+  ],
+  "draft": {
+    "title": "Simulated evidence summary",
+    "claims": [
+      {
+        "text": "Retrying a graph node after a crash can repeat its side effects.",
+        "citations": [
+          {
+            "evidence_id": "ev-5c092b69ae2194b1",
+            "quote": "Retrying a graph node after a crash can repeat its side effects."
+          }
+        ]
+      },
+      {
+        "text": "CURRENT LESSON: Limit retries to transient failures, enforce a finite attempt budget, and use idempotency keys for replayable external operations.",
+        "citations": [
+          {
+            "evidence_id": "ev-b0de01f8792c2c9c",
+            "quote": "CURRENT LESSON: Limit retries to transient failures, enforce a finite attempt budget, and use idempotency keys for replayable external operations."
+          }
+        ]
+      },
+      {
+        "text": "A graph recursion limit is a final guard against routing bugs, not the application retry policy.",
+        "citations": [
+          {
+            "evidence_id": "ev-84ae67d9bde28f01",
+            "quote": "A graph recursion limit is a final guard against routing bugs, not the application retry policy."
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "Offline demo: claims are copied excerpts; no LLM reasoning was performed.",
+      "Lexical retrieval and quote checks do not establish truth or resolve conflicting notes."
+    ]
+  },
+  "critique": {
+    "passed": true,
+    "feedback": []
+  },
+  "validation_errors": [],
+  "feedback": [
+    "Claim 1 has no citations."
+  ],
+  "draft_attempts": 2,
+  "max_drafts": 3,
+  "require_review": true,
+  "status": "approved",
+  "error": null,
+  "review_error": null,
+  "events": [
+    {
+      "node": "plan",
+      "attempt": 0,
+      "detail": "Prepared 3 retrieval queries."
+    },
+    {
+      "node": "retrieve",
+      "attempt": 0,
+      "detail": "Retrieved 4 passages for: How should retries use idempotency and a bounded retry budget?"
+    },
+    {
+      "node": "retrieve",
+      "attempt": 0,
+      "detail": "Retrieved 4 passages for: How should retries use idempotency"
+    },
+    {
+      "node": "retrieve",
+      "attempt": 0,
+      "detail": "Retrieved 4 passages for: a bounded retry budget"
+    },
+    {
+      "node": "draft",
+      "attempt": 1,
+      "detail": "Generated draft 1."
+    },
+    {
+      "node": "validate",
+      "attempt": 1,
+      "detail": "Citation integrity failed: 1 issues."
+    },
+    {
+      "node": "draft",
+      "attempt": 2,
+      "detail": "Generated draft 2."
+    },
+    {
+      "node": "validate",
+      "attempt": 2,
+      "detail": "All citation integrity checks passed (semantic support is separate)."
+    },
+    {
+      "node": "critique",
+      "attempt": 2,
+      "detail": "Passed."
+    },
+    {
+      "node": "prepare_review",
+      "attempt": 2,
+      "detail": "Waiting for human review."
+    },
+    {
+      "node": "review",
+      "attempt": 2,
+      "detail": "Human chose approve."
+    }
+  ]
+}

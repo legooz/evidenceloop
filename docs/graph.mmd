@@ -1,0 +1,39 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	plan(plan)
+	retrieve(retrieve)
+	draft(draft)
+	validate(validate)
+	critique(critique)
+	exhausted(exhausted)
+	ready(ready)
+	prepare_review(prepare_review)
+	review(review)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> plan;
+	critique -.-> __end__;
+	critique -.-> draft;
+	critique -.-> exhausted;
+	critique -.-> prepare_review;
+	critique -.-> ready;
+	draft -.-> __end__;
+	draft -.-> validate;
+	plan -.-> retrieve;
+	prepare_review --> review;
+	retrieve --> draft;
+	review -.-> __end__;
+	review -.-> draft;
+	validate -.-> critique;
+	validate -.-> draft;
+	validate -.-> exhausted;
+	exhausted --> __end__;
+	ready --> __end__;
+	review -.-> review;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

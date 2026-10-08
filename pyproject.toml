@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "evidenceloop"
+version = "0.1.0"
+description = "A bounded LangGraph research loop with evidence checks, durable review, and reproducible evaluations."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+  "langgraph>=1.0,<2",
+  "langgraph-checkpoint-sqlite>=3,<4",
+  "pydantic>=2.10,<3",
+  "httpx>=0.28,<1",
+  "rich>=13.9,<15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.12,<1"]
+
+[project.scripts]
+evidenceloop = "evidenceloop.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/evidenceloop"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
